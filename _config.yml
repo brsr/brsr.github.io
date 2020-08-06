@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: BRSR's Blog
+title: The BRSR Blog
 name: Brenton R S Recht
 email: brstone@gmail.com
 github_username: brsr
