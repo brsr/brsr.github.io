@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "COVID in Oneida County"
-tags: python, utica
+tags: python utica
 ---
 I wrote an article for the Utica College Center of Public Affairs and Election Research blog,
 ["Why Oneida County briefly showed the most COVID-19 symptoms in Upstate NY"](https://www.ucpublicaffairs.com/home/2020/5/2/why-oneida-county-briefly-showed-the-most-covid-19-symptoms-in-upstate-ny-by-brenton-recht). Spoiler alert: it's statistical noise from a small sample size.

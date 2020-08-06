@@ -1,0 +1,16 @@
+<style>
+    .image-gallery {overflow: auto; margin-left: -1%!important;}
+    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: {{ include.width }};}
+    .image-gallery li a {text-align: center; text-decoration: none!important;}
+    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
+    .image-gallery li a img {width: 100%; display: block;}
+</style>
+
+<ul class="image-gallery" align="center">
+  {% for item in include.listing %}
+    <li><a href="{{ item.link }}" title="{{ item.name }}">
+      <img src="{{ item.link }}" title="{{ item.name }}" alt="{{ item.name }}"/>
+      <span>{{ item.name }}</span>
+    </a></li>
+  {% endfor %}
+</ul>
