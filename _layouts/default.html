@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: [
+          "MathMenu.js",
+          "MathZoom.js",
+          "AssistiveMML.js",
+          "a11y/accessibility-menu.js"
+        ],
+        jax: ["input/TeX", "output/CommonHTML"],
+        TeX: {
+          extensions: [
+            "AMSmath.js",
+            "AMSsymbols.js",
+            "noErrors.js",
+            "noUndefined.js",
+          ]
+        }
+      });
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <h1>{{ site.title }}</h1>
+        </nav>
+        <nav>
+          {% for item in site.data.navigation %}
+            <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+              {{ item.name }}
+            </a> |
+
+          {% endfor %}
+          <a href="email:{{ site.email }}">Email</a>
+          | <a href="https://github.com/{{ site.github_username }}">Github</a>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+      <section>
+        {{ content }}
+      </section>
+    </div>
+
+    <div id="footer">
+      <nav>
+        © {{ site.time | date: '%Y' }} {{ site.name }} unless otherwise stated.
+      </nav>
+    </div>
+  </body>
+</html>
