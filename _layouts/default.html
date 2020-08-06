@@ -47,8 +47,8 @@
             </a> |
 
           {% endfor %}
-          <a href="email:{{ site.email }}">Email</a>
-          | <a href="https://github.com/{{ site.github_username }}">Github</a>
+          <a href="https://github.com/{{ site.github_username }}">Github</a>
+          | <a href="email:{{ site.email }}">Email</a>
         </nav>
       </div><!-- end header -->
 
@@ -59,7 +59,7 @@
     </div>
 
     <div id="footer">
-        © {{ site.time | date: '%Y' }} {{ site.name }} unless otherwise stated.
+        &#169; {{ site.time | date: '%Y' }} {{ site.name }} unless otherwise stated.
     </div>
   </body>
 </html>
