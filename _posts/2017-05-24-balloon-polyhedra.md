@@ -15,7 +15,7 @@ images2:
 imagewidth: 45%
 ---
 
-Aside from the Platonic solids, there are no regular tilings of the sphere. You can't, for instance, have a spherical polyhedron where the vertices are all connected to 6 edges. You need to introduce a non-triangular face, or a vertex with a different connectivity. This is why the [geodesic polyhedra](https://en.wikipedia.org/wiki/Geodesic_polyhedron) and [Goldberg polyhedra](https://en.wikipedia.org/wiki/Goldberg_polyhedron) have the structure they do: most of the faces and vertices are regular, but a small number are not.
+Aside from the Platonic solids, there are no regular tilings of the sphere. You can't, for instance, have a spherical polyhedron where the vertices are all connected to 6 edges (i.e. of order 6). You need to introduce a non-triangular face, or a vertex with a different connectivity. This is why the [geodesic polyhedra](https://en.wikipedia.org/wiki/Geodesic_polyhedron) and [Goldberg polyhedra](https://en.wikipedia.org/wiki/Goldberg_polyhedron) have the structure they do: most of the faces and vertices are regular, but a small number are not.
 
 You can, however, cheat a little. Suppose you want most of your polyhedron to be regular, but it's OK if there's a small region where anything goes. For example, maybe you want a regular grid over most of the Earth, but you're only really interested in the land areas. All the irregularity can go near [the South Pacific pole of inaccessibility](https://en.wikipedia.org/wiki/Pole_of_inaccessibility#Oceanic_pole_of_inaccessibility). (R'lyeh already has non-Euclidean geometry, let Cthulhu deal with it...)
 
