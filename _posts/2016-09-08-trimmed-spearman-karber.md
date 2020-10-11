@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Trimmed Spearman-Karber method"
-tags: R
+tags: r
 ---
 I've written an R package that implements the trimmed Spearman-Karber method for dose-response curves. [It's available on Github.](https://github.com/brsr/tsk)
 
