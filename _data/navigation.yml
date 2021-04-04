@@ -4,3 +4,5 @@
   link: /tags.html
 - name: About
   link: /about.html
+- name: RSS 
+  link: /feed.xml
