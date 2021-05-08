@@ -7,7 +7,7 @@ There are many triangle centers defined for Euclidean triangles. These triangle 
 
 <center><img src="/assets/images/spherical/centers.svg" alt="Some centers of a spherical triangle" height="300" /></center>
 
-Let the triangle have vertices $$\mathbf{\hat{a}}$$, $$\mathbf{\hat{b}}$$, and $$\mathbf{\hat{c}}$$, oriented counterclockwise. See [this earlier post](/2021/05/01/vector-spherical-geometry.html) for more details on spherical geometry using vectors.
+Let the triangle have vertices $$\mathbf{\hat{a}}$$, $$\mathbf{\hat{b}}$$, and $$\mathbf{\hat{c}}$$, oriented counterclockwise. See [this earlier post]({% post_url 2021-05-01-vector-spherical-geometry %}) for more details on spherical geometry using vectors.
 
 # Centroid (Vertex-Median point)
 The simplest spherical triangle center is to take the Euclidean centroid of the points and then normalize onto the sphere. This is the point of intersection of medians.
