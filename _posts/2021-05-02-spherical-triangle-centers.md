@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Spherical triangle centers with vectors"
-tags: geometry
+tags: geometry gis
 ---
 There are many triangle centers defined for Euclidean triangles. These triangle centers can also be defined in spherical geometry, but some Euclidean centers correspond to two or more spherical centers. See [this paper](https://arxiv.org/abs/1608.08190) for details. That said, this post lists some spherical triangle centers with nice constructions in terms of vectors. Here's an image of them together. Unlike in Euclidean geometry, none of these fall on a geodesic together, although there may be an equivalent to the Euler line using centers not included here.
 
@@ -81,3 +81,5 @@ Note that if any two edges have length $$\pi/2$$, both these expressions are und
 * If all three edges have length $$\pi/2$$, then the orthocenter is the same point as the centroid (and the other triangle centers listed).
 
 <center><img src="/assets/images/spherical/orthocenter.svg" alt="The orthocenter of a spherical triangle" height="300" /></center>
+
+*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/vector-spherical-geometry.py).*

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Multilateration on the sphere with vectors"
-tags: geometry
+tags: geometry gis
 
 images2:
   - name: Two intersecting circles
@@ -45,7 +45,7 @@ $$
 \end{bmatrix}
 $$
 
-This has general solution:
+This has general solution ([as per Wikipedia](https://en.wikipedia.org/wiki/Plane_(geometry)#Line_of_intersection_between_two_planes)):
 
 $$
 \mathbf{v} = h_1 \mathbf{\hat{c}}_1 + h_2 \mathbf{\hat{c}}_2 + t (\mathbf{\hat{c}}_1 \times \mathbf{\hat{c}}_2)
@@ -127,3 +127,5 @@ Given this system, proceed as in the three-plane case. Although the least square
 
 # Triangulation
 Does your application have angles of bearing instead of distances, or a mix of bearings and distances? Convert the bearings to great circles using the method described in [the solving the "forward problem" section of this earlier post]({% post_url 2021-05-01-vector-spherical-geometry %}), and then apply the methods decribed above.
+
+*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/vector-multilat.py).*
