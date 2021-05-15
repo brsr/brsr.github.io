@@ -63,13 +63,12 @@ t = \pm \frac{\sqrt{1 - h_1^2 - h_2^2 - 2 h_1 h_2 \mathbf{\hat{c}}_1 \cdot \math
 $$
 
 $$t$$ is zero if the two circles just touch in a single point. If the two circles do not intersect,
-$$t$$ is not defined. The least-squares solution, whether or not the circles intersect, is given by letting $$t=0$$ and normalizing $$\mathbf{v}$$ so that it is a unit vector.
+$$t$$ is not defined. The approximate solution, whether or not the circles intersect, is given by letting $$t=0$$ and normalizing $$\mathbf{v}$$ so that it is a unit vector.
 
 {% include image-gallery.html listing = page.images2 width = page.imagewidth %}
 
 # Three
 Three planes intersect at a point, unless any pair are parallel to each other. This point may or may not lie on the surface of the sphere. If it does not -- if the circles do not intersect exactly in a single point -- this gives an approximate solution that does lie on the sphere.
-
 $$
 \begin{bmatrix}
 \mathbf{\hat{c}}_1 & \mathbf{\hat{c}}_2 & \mathbf{\hat{c}}_3
@@ -80,7 +79,7 @@ $$
 \end{bmatrix}
 $$
 
-Let $$\mathbf{r}$$ be the column vector with entries $$\cos r_i$$, then the solution is
+Assume that $$\mathbf{\hat{c}}_1$$, $$\mathbf{\hat{c}}_2$$, and $$\mathbf{\hat{c}}_3$$ are in counterclockwise order on the sphere. Let $$\mathbf{r}$$ be the column vector with entries $$\cos r_i$$, then the solution is
 
 $$
 \mathbf{\hat{v}} = \frac{\begin{bmatrix}
@@ -108,7 +107,7 @@ $$
 \end{bmatrix}
 $$
 
-Let $$\mathbf{\hat{c}}_i = [x_i, y_i, z_i]$$. Let $$\mathbf{x}$$ be the vector having $$x_i$$ as its $$i$$th component, and so on for $$\mathbf{y}$$ and $$\mathbf{z}$$. Also let $$\mathbf{r}$$ be the column vector with entries $$\cos r_i$$ as before. Then the least squares solution to the system above is
+Let $$\mathbf{\hat{c}}_i = [x_i, y_i, z_i]$$. Let $$\mathbf{x}$$ be the vector having $$x_i$$ as its $$i$$th component, and so on for $$\mathbf{y}$$ and $$\mathbf{z}$$. Also let $$\mathbf{r}$$ be the column vector with entries $$\cos r_i$$ as before. (It is not necessary to assume that $$\mathbf{\hat{c}}_i$$ are in any particular order.) Then the least squares solution to the system above is:
 
 $$
 \begin{bmatrix}
