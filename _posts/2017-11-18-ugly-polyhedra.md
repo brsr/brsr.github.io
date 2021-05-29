@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Polyhedra may be beautiful, but these ones aren't"
-tags: geometry antiprism
+tags: geometry antiprism cursed
 ---
 Often, beauty in mathematics is described as relating to simplicity or symmetry. The procedure about to be described is interesting because despite being simple and symmetric, the end result looks a little like it suffers from an untreated skin condition.
 
