@@ -145,3 +145,44 @@ s = \frac{k(k-1)\pm \sqrt{(k-1)(2k-\|p\|^2(k+1))}}{\|p\|^2 + k(k-2)}
 $$
 
 Use the condition $$\mathbf{\hat{c}} \cdot \mathbf{\hat{v}} > 0$$ to choose the sign in the formula. The specific inverse projections for stereographic and gnomonic can be derived from this. When $$k=-1$$, $$s=\frac{4}{\|\mathbf{p}\|^2 + 3}$$ (or $$s=0$$, which is a spurious solution). When $$k=0$$, $$s=\pm\frac{1}{\|\mathbf{p}\|}$$: the positive solution is the one on the near side of the sphere. For the orthographic projection, however, this quadratic equation does not result in a useful answer in the limit: use the solution given earlier instead.
+
+<details>
+  <summary><i>Click here for the Python code to generate the image in the introduction.</i></summary>
+<pre>
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(figsize=(9, 4))
+patch = mpl.patches.Circle((0,0), radius=1, fill = False, edgecolor='k')
+ax.add_artist(patch)
+ax.set_aspect('equal')
+ax.axis('off')
+ax.set_ylim(-1.15, 3.5)
+bboxstyle = bbox={'facecolor':'white','alpha':0.75,'edgecolor':'none','pad':1}
+v = (1/np.sqrt(2), 1/np.sqrt(2))
+ax.scatter(*v, c='k')
+ax.plot([1,-1],[1,1], c='k', linestyle='--')
+#stereographic
+
+ax.scatter(0, -1, c='blue')
+ax.plot([0,-2 + 2*np.sqrt(2)], [-1,1], c='blue')
+ax.text(0, -1+0.15, 'Stereographic', ha='center', bbox=bboxstyle)
+#gnomonic
+ax.scatter(0, 0, c='orange')
+ax.plot([0,1], [0,1], c='orange')
+ax.text(0, 0.15, 'Gnomonic', ha='center', bbox=bboxstyle)
+#general
+c = (0, 2)
+ax.scatter(*c, c='green')
+ax.plot(*zip(c, v), c='green')
+ax.text(0, 2.15, 'General', ha='center', bbox=bboxstyle)
+#orthographic
+#ax.plot((v[0],v[0]),(v[1],3), color='red')
+ax.text(0, 3.15, 'Orthographic', ha='center', bbox=bboxstyle)
+p1 = mpl.patches.FancyArrowPatch((v[0], v[1]), (v[0], 3.15),
+                                 arrowstyle="->", color='red',
+                                 mutation_scale=20)
+ax.add_artist(p1)
+fig.savefig('perspective_projections.svg', bbox_inches = 'tight')
+</pre>
+</details>
