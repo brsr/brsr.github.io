@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Multilateration on the sphere with vectors"
-tags: geometry gis
+tags: geometry vectors cartography
 
 images2:
   - name: Two intersecting circles

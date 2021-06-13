@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Spherical geometry with vectors"
-tags: geometry gis
+tags: geometry vectors cartography
 ---
 Geometric constructions on the sphere are often simpler when expressed using 3-dimensional unit vectors. This method sees some use in geography, where it is called the [n-vector representation](https://en.wikipedia.org/wiki/N-vector): [other sites have more formulas for n-vector based geodesy](https://www.movable-type.co.uk/scripts/latlong-vectors.html). (Technically n-vectors account for the slightly flattened ellipsoidal shape of the earth, but the set of n-vectors forms a unit sphere.) It can also be faster, avoiding trig functions. Also, vectors are the natural representation for applications like 3D rendering. Furthermore, these formula allow you to plug-and-chug a lot of spherical geometry problems, rather than having to rely on geometric insight. (That might not be a plus for some people, which is fair.) This document is a collection of notes on general spherical geometry using vectors. It doesn't focus on its application to geodesy, but geodesy is mentioned where applicable.
 

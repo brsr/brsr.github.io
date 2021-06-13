@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Preschoolers in Oneida County, NY"
-tags: gis utica
+tags: cartography utica
 images:
   - name: Utica & Rome
     link: /assets/images/preschoolers/preschoolers_utica_rome.png
