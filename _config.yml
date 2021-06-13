@@ -22,6 +22,7 @@ lang: en-US
 
 # Build settings
 markdown: kramdown
+#markdown: CommonMarkGhPages
 theme: jekyll-theme-midnight
 plugins:
   - jekyll-feed
