@@ -43,18 +43,18 @@ Finally, $$\beta_0 = 1 - h$$, and $$\beta_1 = h - \beta_2$$.
 ## Inverse
 The inverse formula is lengthy, but follows straightforwardly from the formward formula. Contrary to Snyder's original paper[^Snyder] and a paper that followed[^Harrison], it does have a closed form solution.
 
-Let $$c_{ij} = \mathbf{\hat{v}}_i \cdot \mathbf{\hat{v}}_j$$, and $$s_{ij} = \sqrt{1-c_{ij}^2} = \| \mathbf{\hat{v}}_i \times \mathbf{\hat{v}}_j \|$$. $$\arctan(x,y)$$ is [the two-parameter form of arctan](https://en.wikipedia.org/wiki/Atan2).
+Let $$c_{ij} = \mathbf{\hat{v}}_i \cdot \mathbf{\hat{v}}_j$$, and $$s_{ij} = \sqrt{1-c_{ij}^2} = \| \mathbf{\hat{v}}_i \times \mathbf{\hat{v}}_j \|$$.
 
 $$\begin{split}
 h &= 1 - \beta_0 \\
 a &= \frac{\beta_2}{h} A\left(\mathbf{\hat{v}}_0, \mathbf{\hat{v}}_1, \mathbf{\hat{v}}_2\right)\\
 S &= \sin(a) \\
 C &= 1 - \cos(a) \\
-F &= \left(S |\mathbf{V}| + C \left(c_{01} c_{12} - c_{20}\right)\right)^2 - \left(s_{12} C \left(1 + c_{01}\right)\right)^2\\
-G &= 2 s_{12} C (1 + c_{01}) (S |\mathbf{V}| + C (c_{01} c_{12} - c_{20}))\\
-q &= \frac{\arctan\left( G, F\right)}{\arccos \left(c_{12} \right)} \\
+f &= S |\mathbf{V}| + C \left(c_{01} c_{12} - c_{20}\right) \\
+g &= C s_{12} \left(1 + c_{01}\right) \\
+q &= \frac{2}{\arccos \left(c_{12} \right)} \arctan\left( \frac{g}{f} \right) \\
 \mathbf{\hat{p}} &= \operatorname{Slerp}\left(\mathbf{\hat{v}}_1, \mathbf{\hat{v}}_2; q\right) \\
-t &= \frac{\arccos \left( 1 - h^2 (1 - \mathbf{\hat{v}}_0 \cdot \mathbf{\hat{p}})\right)}
+t &= \frac{\arccos \left( 1 + h^2 (\mathbf{\hat{v}}_0 \cdot \mathbf{\hat{p}} - 1)\right)}
 {\arccos \left(\mathbf{\hat{v}}_0 \cdot \mathbf{\hat{p}} \right)} \\
 \mathbf{\hat{v}} &= \operatorname{Slerp}\left(\mathbf{\hat{v}}_0, \mathbf{\hat{p}}; t\right)
 \end{split}$$
