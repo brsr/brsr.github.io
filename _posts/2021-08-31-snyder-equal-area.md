@@ -111,7 +111,7 @@ x &= \sqrt{2} \sin\left(\frac{\pi}{4} - \frac{\varphi}{2}\right),\\
 y &= \frac{4}{\pi} x \lambda.
 \end{split}$$
 
-This is equivalent to the formula for the [Collignon projection](https://en.wikipedia.org/wiki/Collignon_projection) with an affine transformation. Snyder didn't mention it in his paper, despite having included the Collignon projection in his 1989 [Album of Map Projections](https://doi.org/10.3133%2Fpp1453) with Voxland.[^Voxland] Snyder may not have been interested in the hemisphere case – he didn't include any hemisphere examples in his paper – so he might not have bother including the fact in the paper.
+This is equivalent to the formula for the [Collignon projection](https://en.wikipedia.org/wiki/Collignon_projection) with an affine transformation. Snyder didn't mention it in his paper, despite having included the Collignon projection in his 1989 [Album of Map Projections](https://doi.org/10.3133%2Fpp1453) with Voxland.[^Voxland] Snyder may not have been interested in the hemisphere case: he didn't include any hemisphere examples in his paper.
 
 Lambers (not Lambert) in a paper "Mappings between sphere, disc, and square"[^Lambers] used a mapping from a hemisphere to a square that is a composition of the [Lambert azimuthal equal-area projection](https://en.wikipedia.org/wiki/Lambert_azimuthal_equal-area_projection) and the Shirley-Chiu equal-area mapping between the disk and the square.[^Chiu] This, when restricted to a single quadrant, is also equivalent to the Collignon projection with an affine transformation. This is easiest to see in polar form:
 

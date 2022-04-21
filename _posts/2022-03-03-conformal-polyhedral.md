@@ -128,8 +128,6 @@ Lee's monograph is the length that it is because of all the numerical methods in
 
 On one hand, the theory here has been settled for some time, and the steps are documented. But on the other, those steps are more complicated to calculate than they look on the surface. For Adams to have calculated all this in 1925 must have been very time-consuming. You're also up a creek if you want to use an asymmetric polyhedron. Given that polyhedral projections are more often seen as novelties instead of practically useful, it's understandable that most GIS software doesn't bother.
 
-But are there other ways to approach this question? Another dubious way to perform this projection will be described in the next post.
-
 *A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/conformal_polyhedral.py).*
 
 # References
