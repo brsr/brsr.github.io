@@ -3,6 +3,12 @@ layout: post
 title: "Area-preserving swirling of the disk"
 tags: cartography
 
+images_lede:
+  - name: Lambert
+    link: /assets/images/wiggles/identity.svg
+  - name: Wiechel
+    link: /assets/images/wiggles/wiechel_2.svg
+
 images_linear:
   - name: k = -π/4
     link: /assets/images/wiggles/linear_4.svg
@@ -29,9 +35,10 @@ images_wiggles:
 
 imagewidth: 32%
 ---
-<img src="/assets/images/wiggles/identity.svg" alt="Lambert azimuthal equal-area projection of the Earth" height="300" style="float:right" />
-A consequence of the [Riemann mapping theorem](https://en.wikipedia.org/wiki/Riemann_mapping_theorem) is that the conformal map from a given region of the sphere to a given region of the plane is unique. Area-preserving maps, however, are not. For example, the
-The [Lambert azimuthal equal-area projection](https://en.wikipedia.org/wiki/Lambert_azimuthal_equal-area_projection) (left) is an azimuthal equal-area map projection, which takes the sphere to a disk. The [Wiechel projection](https://en.wikipedia.org/wiki/Wiechel_projection) (depicted later) is also an equal-area map projection, which resembles a swirled version of the Lambert projection. [As demonstrated on Daan Strebe's forums](https://www.mapthematics.com/forums/viewtopic.php?f=8&t=716&sid=d27a60a94f4adecffdc1485668e8e486#p1714), the Wiechel projection has worse angular distortion than the Lambert projection, so its only real use is to demonstrate that equal-area map projectons aren't unique.
+A consequence of the [Riemann mapping theorem](https://en.wikipedia.org/wiki/Riemann_mapping_theorem) is that the conformal map from a given region of the sphere to a given region of the plane is essentially unique. Area-preserving maps, however, are not. For example, the
+The [Lambert azimuthal equal-area projection](https://en.wikipedia.org/wiki/Lambert_azimuthal_equal-area_projection) (left) is an azimuthal equal-area map projection, which takes the sphere to a disk. The [Wiechel projection](https://en.wikipedia.org/wiki/Wiechel_projection) (right) is also an equal-area map projection, which resembles a swirled version of the Lambert projection. [As demonstrated on Daan Strebe's forums](https://www.mapthematics.com/forums/viewtopic.php?f=8&t=716&sid=d27a60a94f4adecffdc1485668e8e486#p1714), the Wiechel projection has uniformly worse angular distortion than the Lambert projection, so its only real use is to demonstrate that equal-area map projectons aren't unique.
+
+{% include image-gallery.html listing = page.images_lede width = page.imagewidth %}
 
 The Wiechel projection isn't unusual. There is an infinite family of such equal-area map projectons to the disk. Those may be easier to understand as a transformation of the disk applied after the Lambert projection. Here we'll look at some such transformations that are easy to describe.
 
@@ -75,3 +82,5 @@ We're not limited to monotonic functions for $$f$$. These ones use functions of 
 
 # Angle distortion
 None of these are improvements on the Lambert projection, at least in terms of angle distortion. Without getting into a lengthy calculation, notice that other transformations alter the angle at which meridians meet circles of latitude, particularly at the equator where, on the sphere, meridians intersect at right angles. However, it is interesting that we can make the angle distortion as bad as we like, for example by choosing an arbitrary large $$k$$.
+
+*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/swirls.py).*

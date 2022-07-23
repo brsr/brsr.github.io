@@ -11,7 +11,7 @@ These formula may fail for some specific configurations of points, often when tw
 
 In general the notation used here is standard 3-dimensional vector algebra notation. The scalar triple product is written $$\begin{vmatrix} \mathbf{a}, \mathbf{b}, \mathbf{c} \end{vmatrix}$$ instead of $$\mathbf{a} \cdot \mathbf{b} \times \mathbf{c}$$. For a summary of relevant vector identities, see [Wikipedia's page](https://en.wikipedia.org/wiki/Vector_algebra_relations).
 
-Because of their importance for geodesy, it's convenient to define a few static points. The north pole is denoted $$\mathbf{\hat{n}} = [0,0,1]$$ and the point at latitude 0 and longitude 0 is denoted $$\mathbf{\hat{o}} = [1,0,0]$$. The center of the great circle passing through those points, that is, the prime meridian and 180th meridian is $$\mathbf{\hat{p}} = [0,1,0]$$ (the significance of which will be explained later).
+Because of their importance for geodesy, it's convenient to define a few static points. The north pole is denoted $$\mathbf{\hat{n}} = [0,0,1]$$ and the point at latitude 0 and longitude 0 is denoted $$\mathbf{\hat{o}} = [1,0,0]$$. The center of the great circle passing through those points, which is the prime meridian and 180th meridian, is $$\mathbf{\hat{p}} = [0,1,0]$$ (the significance of which will be made clearer later).
 
 # Converting latitude and longitude to vector
 Let latitude be $$\varphi$$ and longitude be $$\lambda$$, then the forward
@@ -39,7 +39,7 @@ $$
 \end{split}
 $$
 
-where [the 2-variable form of $$\arctan$$, commonly called `arctan2` or `atan2` in numeric software libraries](https://en.wikipedia.org/wiki/Atan2), is used for $$\lambda$$.
+where [the 2-variable form of $$\arctan$$, commonly called `arctan2` or `atan2` in numeric software libraries](https://en.wikipedia.org/wiki/Atan2), is used for $$\lambda$$. The second form for $$\varphi$$ is more numerically stable but has more calculation steps.
 
 # Random vector on the unit sphere
 A random vector on the unit sphere can be produced by creating a 3D vector, each of whose components is drawn from a normal distribution with mean 0 and constant standard deviation, and then normalizing. The distribution of vectors drawn this way is uniform across the sphere.
@@ -54,7 +54,7 @@ d\left(\mathbf{\hat{a}}, \mathbf{\hat{b}}\right)
 = \arctan\left(\frac{\| \mathbf{a} \times \mathbf{b} \|}{\mathbf{a} \cdot \mathbf{b}}\right).
 $$
 
-The central angle takes values from 0 to $$\pi$$ in radians. Radians are convenient here because they make angles and distances equivalent. Note that the $$\arcsin$$ form is only valid for distances less than $$\pi/2$$. The form using $$\arctan$$ is valid for all non-zero vectors: it is also numerically accurate over the entire range.
+The central angle takes values from 0 to $$\pi$$ in radians. Radians are convenient here because they make angles and distances equivalent. Note that the $$\arcsin$$ form is only valid for distances less than $$\pi/2$$. The form using $$\arctan$$ is a valid formula for the central angle between any two non-zero vectors, not just unit vectors: it is also numerically accurate over the entire range.
 
 The distance function is bounded from below by the Euclidean distance between the unit vectors:
 
@@ -68,11 +68,11 @@ Calculating distances is also called the reverse geodetic problem, although the 
 
 # Circles and lines
 <img src="/assets/images/spherical/circles.svg" alt="Concentric circles on the sphere" height="300" style="float:right">
-Given a center vector $$\mathbf{\hat{c}}$$ and a constant radius $$r$$ in $$(0, \pi)$$, the solutions for $$\mathbf{\hat{v}}$$ of equation $$d\left(\mathbf{\hat{c}}, \mathbf{\hat{v}}\right) = r$$ make a circle on the sphere. If $$r = 0$$, the solution is just the original point $$\mathbf{\hat{c}}$$. If $$r= \pi$$, the solution is the antipodal point $$-\mathbf{\hat{c}}$$. If $$r= \pi / 2$$, the circle is called a great circle: otherwise, it is called a small circle. Some concentric circles on the sphere are pictured to the right.
+Given a center vector $$\mathbf{\hat{c}}$$ and a constant radius $$r$$ in $$(0, \pi)$$, the solutions for $$\mathbf{\hat{v}}$$ of equation $$d\left(\mathbf{\hat{c}}, \mathbf{\hat{v}}\right) = r$$ make a circle on the sphere. If $$r = 0$$, the solution is just the original point $$\mathbf{\hat{c}}$$. If $$r= \pi$$, the solution is the antipodal point $$-\mathbf{\hat{c}}$$. If $$r= \pi / 2$$, the circle is called a great circle. Otherwise, it is called a small circle. Some concentric circles on the sphere are pictured to the right.
 
 Rearranging the distance function form that uses cosine gives $$\mathbf{\hat{c}} \cdot \mathbf{\hat{v}} = \cos r$$, which is the [Hesse normal form](https://en.wikipedia.org/wiki/Hesse_normal_form) of a plane. $$\mathbf{\hat{c}}$$ is a unit normal vector to the plane. These circles are just the intersection of a plane with the sphere: furthermore, circles on the surface of the sphere are also circles in 3D Euclidean space.
 
-Great circles are the lines of shortest distance between two points, or geodesics, on the sphere. For a great circle, $$k=\pi/2$$, and $$\mathbf{\hat{c}} \cdot \mathbf{\hat{v}} = 0$$. That is, a great circle is determined by its center point, also called the pole of the great circle, or the normal of the plane of the great circle. This text uses "center of the great circle", mostly because I think it's the more intuitive choice.
+Great circles are the lines of shortest distance between two points, or geodesics, on the sphere. For a great circle, $$r=\pi/2$$, and $$\mathbf{\hat{c}} \cdot \mathbf{\hat{v}} = 0$$. That is, a great circle is determined by its center point, also called the pole of the great circle, or the normal of the plane of the great circle. This text uses "center of the great circle", mostly because I think it's the more intuitive choice.
 
 Given any two points on a great circle, the center of that great circle is
 
@@ -208,7 +208,7 @@ $$
 If $$\ell = \frac{\pi}{2}$$, the slerp formula simplifies to
 
 $$
-\operatorname{Slerp}(\mathbf{\hat{a}},\mathbf{\hat{b}}; t) = \mathbf{\hat{a}} \cos {(t\ell)}  + \mathbf{\hat{b}} \sin{(t\ell)},
+\operatorname{Slerp}(\mathbf{\hat{a}},\mathbf{\hat{b}}; t) = \mathbf{\hat{a}} \cos {\left(\frac{\pi}{2}t\right)}  + \mathbf{\hat{b}} \sin{\left(\frac{\pi}{2}t\right)},
 $$
 
 which is the Rodrigues rotation formula when the rotated point lies on the great circle, with an axis of rotation given by $$\mathbf{\hat{c}} = \mathbf{\hat{a}} \times \mathbf{\hat{b}}$$. (Since $$\mathbf{\hat{a}}$$ and $$\mathbf{\hat{b}}$$ are at right angles to each other, no normalization is needed.)

@@ -7,7 +7,7 @@ images2:
   - name: Two intersecting circles
     link: /assets/images/spherical/bilat_45.svg
   - name: Two touching circles
-    link: /assets/images/spherical/bilat_37.97.svg
+    link: /assets/images/spherical/bilat_37.98.svg
   - name: Two non-intersecting circles
     link: /assets/images/spherical/bilat_10.svg
 
@@ -63,7 +63,7 @@ t = \pm \frac{\sqrt{1 - h_1^2 - h_2^2 - 2 h_1 h_2 \mathbf{\hat{c}}_1 \cdot \math
 $$
 
 $$t$$ is zero if the two circles just touch in a single point. If the two circles do not intersect,
-$$t$$ is not defined. The approximate solution, whether or not the circles intersect, is given by letting $$t=0$$ and normalizing $$\mathbf{v}$$ so that it is a unit vector.
+$$t$$ is not defined. An approximate single solution, whether or not the circles intersect, is given by letting $$t=0$$ and normalizing $$\mathbf{v}$$ so that it is a unit vector. In the images below, the points of intersection are marked with a black dot, and the approximate solution is marked with an x.
 
 {% include image-gallery.html listing = page.images2 width = page.imagewidth %}
 

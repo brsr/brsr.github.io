@@ -3,7 +3,7 @@ layout: post
 title: "Spherical triangle centers with vectors"
 tags: geometry vectors cartography
 ---
-There are many triangle centers defined for Euclidean triangles. These triangle centers can also be defined in spherical geometry, but some Euclidean centers correspond to two or more spherical centers. See [this paper](https://arxiv.org/abs/1608.08190) for details. That said, this post lists some spherical triangle centers with nice constructions in terms of vectors. Here's an image of them together. Unlike in Euclidean geometry, none of these fall on a geodesic together, although there may be an equivalent to the Euler line using centers not included here.
+There are many triangle centers defined for Euclidean triangles. These triangle centers can also be defined in spherical geometry, although some Euclidean centers correspond to two or more spherical centers. See [this paper](https://arxiv.org/abs/1608.08190) for details. This post lists some spherical triangle centers with nice constructions in terms of vectors. Here's an image of them together. Unlike in Euclidean geometry, none of these fall on a geodesic together, although there may be an equivalent to the Euler line using centers not included here.
 
 <center><img src="/assets/images/spherical/centers.svg" alt="Some centers of a spherical triangle" height="300" /></center>
 
@@ -66,7 +66,7 @@ $$
 <center><img src="/assets/images/spherical/circumcenter.svg" alt="The circumcenter of a spherical triangle" height="300" /></center>
 
 # Orthocenter
-The orthocenter is the intersection of altitudes, extending the edges outside the triangle if needed. This seems the most likely of these centers to lie outside the triangle.
+The orthocenter is the intersection of altitudes, extending the edges outside the triangle if needed. This seems to be the most likely of these centers to lie outside the triangle.
 
 $$
 \mathbf{\hat{z}} = \frac{(\mathbf{\hat{c}} \cdot \mathbf{\hat{a}})(\mathbf{\hat{b}} \cdot \mathbf{\hat{c}}) \mathbf{\hat{a}} \times \mathbf{\hat{b}}
