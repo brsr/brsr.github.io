@@ -83,4 +83,6 @@ We're not limited to monotonic functions for $$f$$. These ones use functions of 
 # Angle distortion
 None of these are improvements on the Lambert projection, at least in terms of angle distortion. Without getting into a lengthy calculation, notice that other transformations alter the angle at which meridians meet circles of latitude, particularly at the equator where, on the sphere, meridians intersect at right angles. However, it is interesting that we can make the angle distortion as bad as we like, for example by choosing an arbitrary large $$k$$.
 
+If you want some area-preserving transformations to make a better map instead of a worse one, I recommend this paper: [Daniel “daan” Strebe (2018): A bevy of area-preserving transforms for map projection designers, Cartography and Geographic Information Science, DOI: 10.1080/15230406.2018.1452632](https://doi.org/10.1080/15230406.2018.1452632).
+
 *A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/swirls.py).*
