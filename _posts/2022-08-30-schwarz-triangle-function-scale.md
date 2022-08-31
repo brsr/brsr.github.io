@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Scaling the Schwarz triangle function"
-tags: complex_functions
+tags: complex_functions geometry
 
 ---
 Triangles in spherical and hyperbolic geometry have a property that Euclidean geometry does not: their angles determine their size. The area of a spherical triangle is equal to the angular excess, the sum of its angles minus $$\pi$$. The area of a hyperbolic triangle is equal to the angular deficit, $$\pi$$ minus the sum of its angles. The spherical or hyperbolic laws of sines and cosines behave similarly: they determine specific edge lengths.
