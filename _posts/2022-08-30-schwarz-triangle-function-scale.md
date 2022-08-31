@@ -4,7 +4,7 @@ title: "Scaling the Schwarz triangle function"
 tags: complex_functions geometry
 
 ---
-Triangles in spherical and hyperbolic geometry have a property that Euclidean geometry does not: their angles determine their size. The area of a spherical triangle is equal to the angular excess, the sum of its angles minus $$\pi$$. The area of a hyperbolic triangle is equal to the angular deficit, $$\pi$$ minus the sum of its angles. The spherical or hyperbolic laws of sines and cosines behave similarly: they determine specific edge lengths.
+Triangles in spherical and hyperbolic geometry have a property that Euclidean geometry does not: their angles determine their size. The area of a spherical triangle is equal to the angular excess, the sum of its interior angles minus $$\pi$$. The area of a hyperbolic triangle is equal to the angular deficit, $$\pi$$ minus the sum of its interior angles. The spherical or hyperbolic laws of sines and cosines behave similarly: they determine specific edge lengths.
 
 The Schwarz triangle function, mentioned in a couple prior posts -- [1]({% post_url 2022-03-03-conformal-polyhedral %}), [2]({% post_url 2022-08-27-schwarz-triangle-function-edge %}) -- is useful for conformal mapping of triangles in various geometries. However, it does not necessarily map to a triangle of the right size. In particular, triangles with an angle sum very close to $$\pi$$ should be very small in spherical or hyperbolic geometry. The result of the Schwarz triangle function often must be scaled to obtain a properly-sized triangle for the geometry.
 
@@ -33,7 +33,7 @@ $$\begin{split}
 \end{split}$$
 
 # Law of cosines
-Consider the triangle with angles (in clockwise order) $$\pi \alpha$$, $$\pi \beta$$, and $$\pi \gamma$$, and edge length $$\ell$$ opposite of $$\beta$$.
+Consider the triangle with interior angles (in clockwise order) $$\pi \alpha$$, $$\pi \beta$$, and $$\pi \gamma$$, and edge length $$\ell$$ opposite of $$\beta$$.
 The [spherical law of cosines](https://en.wikipedia.org/wiki/Spherical_law_of_cosines) gives
 
 $$
@@ -58,7 +58,7 @@ $$
 u = \sqrt{\left| \frac{\cos(\pi (\alpha + \gamma)) + \cos(\pi \beta)}{\cos(\pi (\alpha - \gamma)) + \cos(\pi \beta) } \right|}
 $$
 
-Or, in terms of the Schwarz parameters mentioned in the first two articles instead of the angles:
+Or, in terms of the Schwarz parameters mentioned in the first two articles:
 
 $$
 u = \sqrt{\left| \frac{\sin(\pi a) \sin(\pi b)}{\sin(\pi a') \sin(\pi b')} \right|}
