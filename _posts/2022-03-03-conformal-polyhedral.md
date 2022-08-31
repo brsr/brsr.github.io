@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some dubious ways to calculate conformal polyhedral projections"
-tags: cartography cursed python
+tags: cartography cursed python complex_functions
 ---
 (The title of this post is in tribute to Moler and Van Loan's classic paper "[Nineteen Dubious Ways to Compute the Exponential of a Matrix](https://doi.org/10.1137/S00361445024180).")
 
@@ -50,7 +50,7 @@ where $$_2 F_1 \left(a, b; c; z\right)$$ is a [hypergeometric function](https://
 \end{split}$$</td>
 </tr></table>
 
-The function $$s(z)$$ maps $$z = 0$$ to the vertex having angle $$πα$$, $$z = 1$$ to the vertex having angle $$πβ$$, and $$z = \infty$$ to the vertex having angle $$πγ$$. The transformed vertices can be expressed using [gamma functions](https://en.wikipedia.org/wiki/Gamma_function):
+The function $$s(z)$$ maps $$z = 0$$ to the vertex having angle $$πα$$, $$z = 1$$ to the vertex having angle $$πγ$$, and $$z = \infty$$ to the vertex having angle $$πβ$$. The transformed vertices can be expressed using [gamma functions](https://en.wikipedia.org/wiki/Gamma_function):
 
 $$\begin{aligned}
 s(0) &= 0, \\
