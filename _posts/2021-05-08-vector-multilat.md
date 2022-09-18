@@ -67,8 +67,21 @@ $$t$$ is not defined. An approximate single solution, whether or not the circles
 
 {% include image-gallery.html listing = page.images2 width = page.imagewidth %}
 
+If both circles are great circles, then $$r_1 = r_2 = \pi/2$$, $$h_1 = h_2 = 0$$, and $$t = \pm \frac{1}{\|\mathbf{\hat{c}}_1 \times \mathbf{\hat{c}}_2\|}$$, as expected. 
+
+If the second circle is a great circle, then $$r_2 = \pi/2$$ and $$\cos r_2 = 0$$. Then $$h_1$$ simplifies to
+
+$$h_1 = \frac{\cos r_1}{1 -\left(\mathbf{\hat{c}}_1 \cdot \mathbf{\hat{c}}_2\right)^2},$$
+
+and $$h_2 = - \left(\mathbf{\hat{c}}_1 \cdot \mathbf{\hat{c}}_2\right) h_1$$. $$t$$ then simplifies as so:
+
+$$
+t = \pm \frac{\sqrt{\sin^2 r_1 - \left(\mathbf{\hat{c}}_1 \cdot \mathbf{\hat{c}}_2\right)^2 }}{1 -\left(\mathbf{\hat{c}}_1 \cdot \mathbf{\hat{c}}_2\right)^2}
+$$
+
 # Three
 Three planes intersect at a point, unless any pair are parallel to each other. This point may or may not lie on the surface of the sphere. If it does not -- if the circles do not intersect exactly in a single point -- this gives an approximate solution that does lie on the sphere.
+
 $$
 \begin{bmatrix}
 \mathbf{\hat{c}}_1 & \mathbf{\hat{c}}_2 & \mathbf{\hat{c}}_3
