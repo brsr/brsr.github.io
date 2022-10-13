@@ -101,6 +101,15 @@ $$\begin{split}
 \end{split}
 $$
 
+Note that the standard $$\arcsin$$ and $$\arctan$$ functions take values from $$-\pi/2$$ to $$\pi/2$$, while $$\arccos$$ takes values from 0 to $$\pi$$. In some circumstances it is useful to have a signed angle that takes values from $$-\pi$$ to $$\pi$$, which may be given by:
+
+$$
+\theta_a = \arctan \left( \left|\mathbf{\hat{a}}, \mathbf{\hat{b}}, \mathbf{\hat{c}}\right|,
+\mathbf{\hat{b}} \cdot \mathbf{\hat{c}} - \left(\mathbf{\hat{a}} \cdot \mathbf{\hat{b}}\right) \left(\mathbf{\hat{c}} \cdot \mathbf{\hat{a}}\right) \right).
+$$
+
+where the 2-variable form of $$\arctan$$ (`atan2`), mentioned earlier, is used.
+
 # Cosine and Sine rules
 The statement for $$\sin \theta$$ above can be used to derive the [spherical law of sines](https://en.wikipedia.org/wiki/Spherical_law_of_sines):
 
