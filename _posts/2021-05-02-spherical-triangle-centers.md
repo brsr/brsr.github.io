@@ -25,27 +25,6 @@ The point that divides the triangle into three equal-area triangles, as pictured
 
 <center><img src="/assets/images/spherical/area_centroid.svg" alt="The area centroid of a spherical triangle" height="300" /></center>
 
-# Incenter
-The inradius is the intersection of the angle bisectors, and is given by:
-
-$$
-\mathbf{\hat{z}} = \frac{\| \mathbf{\hat{b}} \times \mathbf{\hat{c}}\| \mathbf{\hat{a}}
-+ \| \mathbf{\hat{c}} \times \mathbf{\hat{a}}\| \mathbf{\hat{b}}
-+ \| \mathbf{\hat{a}} \times \mathbf{\hat{b}}\| \mathbf{\hat{c}}}
-{\|\ldots\|}
-$$
-
-The inradius $$r$$ is given by:
-
-$$
-\sin r = \frac{|\mathbf{\hat{a}}, \mathbf{\hat{b}}, \mathbf{\hat{c}}|}
-{\begin{Vmatrix} \|\mathbf{\hat{b}} \times \mathbf{\hat{c}}\| \mathbf{\hat{a}}
-+ \| \mathbf{\hat{c}} \times \mathbf{\hat{a}}\| \mathbf{\hat{b}}
-+ \| \mathbf{\hat{a}} \times \mathbf{\hat{b}}\| \mathbf{\hat{c}}\end{Vmatrix}}
-$$
-
-<center><img src="/assets/images/spherical/incenter.svg" alt="The incenter of a spherical triangle" height="300" /></center>
-
 # Circumcenter
 The circumcenter of a Euclidean triangle is the point with equal distance to each vertex.
 
@@ -81,5 +60,34 @@ Note that if any two edges have length $$\pi/2$$, both these expressions are und
 * If all three edges have length $$\pi/2$$, then the orthocenter is the same point as the centroid (and the other triangle centers listed).
 
 <center><img src="/assets/images/spherical/orthocenter.svg" alt="The orthocenter of a spherical triangle" height="300" /></center>
+
+# Incenter
+The incenter is the intersection of the angle bisectors, and is given by:
+
+$$
+\mathbf{\hat{z}} = \frac{\| \mathbf{\hat{b}} \times \mathbf{\hat{c}}\| \mathbf{\hat{a}}
++ \| \mathbf{\hat{c}} \times \mathbf{\hat{a}}\| \mathbf{\hat{b}}
++ \| \mathbf{\hat{a}} \times \mathbf{\hat{b}}\| \mathbf{\hat{c}}}
+{\|\ldots\|}
+$$
+
+The incenter is also the center of a circle that is tangent to each edge, or the incircle. The radius of that circle is the inradius, and the points where it touches each edge are the intouch points. The inradius $$r$$ is given by:
+
+$$
+\sin r = \frac{|\mathbf{\hat{a}}, \mathbf{\hat{b}}, \mathbf{\hat{c}}|}
+{\begin{Vmatrix} \|\mathbf{\hat{b}} \times \mathbf{\hat{c}}\| \mathbf{\hat{a}}
++ \| \mathbf{\hat{c}} \times \mathbf{\hat{a}}\| \mathbf{\hat{b}}
++ \| \mathbf{\hat{a}} \times \mathbf{\hat{b}}\| \mathbf{\hat{c}}\end{Vmatrix}}
+$$
+
+<center><img src="/assets/images/spherical/incenter.svg" alt="The incenter of a spherical triangle" height="300" /></center>
+
+In plane geometry, one can also define excircles, which are tangent to one edge of the triangle and the extension of the other two sides. In spherical geometry, the extension of the other two sides eventually meets in a point, forming a triangle adjacent to the original triangle. The excircles of the original triangle are just the incircles of the adjacent triangles formed by the extension of its sides. The points of contact between the excircles and the original triangle are the extouch points. In the figure below, the incircle and intouch points are blue and the excircles and extouch points are red.
+
+<center><img src="/assets/images/spherical/extouch.svg" alt="The excenters and extouch points of a spherical triangle" height="300" /></center>
+
+Unlike in plane geometry, the area of the triangle formed by the intouch points (the [intouch triangle, or Gergonne triangle](https://en.wikipedia.org/wiki/Incircle_and_excircles_of_a_triangle#Gergonne_triangle_and_point)) is not the same as the area of the triangle formed by the extouch points (the [extouch triangle, or Nagel triangle](https://en.wikipedia.org/wiki/Extouch_triangle)).
+
+It's worth mentioning that the study of spherical triangle centers is much less well developed than that of planar triangle centers. There may be other ways to translate these definitions between geometries. And like I said earlier, some planar triangle centers correspond to multiple spherical centers. So don't take anything I've said here as a widely-accepted definition!
 
 *A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/vector-spherical-geometry.py).*
