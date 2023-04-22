@@ -246,6 +246,8 @@ $$
 \mathbf{\hat{x}} = \frac{\mathbf{\hat{c}} (\mathbf{\hat{a}} \cdot \mathbf{\hat{c}}) - \mathbf{\hat{a}}}{\|\ldots\|}.
 $$
 
+Also note that the distance from $$\mathbf{\hat{x}}$$ to $$\mathbf{\hat{a}}$$ equals $$\pi/2$$ minus the distance from $$\mathbf{\hat{a}}$$ to $$\mathbf{\hat{g}}$$.
+
 # Triangles
 <img src="/assets/images/spherical/triangle.svg" alt="A spherical triangle" height="300" style="float:right">
 Let the triangle have vertices $$\mathbf{\hat{a}}$$, $$\mathbf{\hat{b}}$$, and $$\mathbf{\hat{c}}$$. If the triple product $$\begin{vmatrix} \mathbf{\hat{a}}, \mathbf{\hat{b}}, \mathbf{\hat{c}} \end{vmatrix}$$ is positive, then the triangle is oriented counterclockwise, which is generally what we will assume. If it's zero, the triangle's vertices lie on a great circle. That can either mean that the triangle is degenerate and has area zero, or that the triangle takes up an entire hemisphere and has area $$2\pi$$. Hemispherical triangles often result in an undefined result, because of the ambiguity of orientation.
