@@ -88,6 +88,6 @@ In plane geometry, one can also define excircles, which are tangent to one edge 
 
 Unlike in plane geometry, the area of the triangle formed by the intouch points (the [intouch triangle, or Gergonne triangle](https://en.wikipedia.org/wiki/Incircle_and_excircles_of_a_triangle#Gergonne_triangle_and_point)) is not the same as the area of the triangle formed by the extouch points (the [extouch triangle, or Nagel triangle](https://en.wikipedia.org/wiki/Extouch_triangle)).
 
-It's worth mentioning that the study of spherical triangle centers is much less well developed than that of planar triangle centers. There may be other ways to translate these definitions between geometries. And like I said earlier, some planar triangle centers correspond to multiple spherical centers. So don't take anything I've said here as a widely-accepted definition!
+It's worth mentioning that the study of spherical triangle centers is much less well developed than that of planar triangle centers. There may be other ways to translate these definitions between geometries. And like I said earlier, some planar triangle centers correspond to multiple spherical centers. These definitions correspond to the paper I linked earlier: other papers may use other definitions.
 
 *A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/vector-spherical-geometry.py).*

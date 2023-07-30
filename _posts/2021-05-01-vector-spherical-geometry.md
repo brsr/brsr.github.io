@@ -11,7 +11,7 @@ These formula may fail for some specific configurations of points, often when tw
 
 In general the notation used here is standard 3-dimensional vector algebra notation. The scalar triple product is written $$\begin{vmatrix} \mathbf{a}, \mathbf{b}, \mathbf{c} \end{vmatrix}$$ instead of $$\mathbf{a} \cdot \mathbf{b} \times \mathbf{c}$$. For a summary of relevant vector identities, see [Wikipedia's page](https://en.wikipedia.org/wiki/Vector_algebra_relations).
 
-Because of their importance for geodesy, it's convenient to define a few static points. The north pole is denoted $$\mathbf{\hat{n}} = [0,0,1]$$ and the point at latitude 0 and longitude 0 is denoted $$\mathbf{\hat{o}} = [1,0,0]$$. The center of the great circle passing through those points, which is the prime meridian and 180th meridian, is $$\mathbf{\hat{p}} = [0,1,0]$$ (the significance of which will be made clearer later).
+Because of their importance for geodesy, it's convenient to define a few static points. The north pole is denoted $$\mathbf{\hat{n}} = [0,0,1]$$ and the point at latitude 0 and longitude 0 is denoted $$\mathbf{\hat{o}} = [1,0,0]$$. The center, or pole, of the great circle passing through those points, which is the prime meridian and 180th meridian, is $$\mathbf{\hat{p}} = [0,1,0]$$ (the significance of which will be made clearer later).
 
 # Converting latitude and longitude to vector
 Let latitude be $$\varphi$$ and longitude be $$\lambda$$, then the forward
@@ -72,22 +72,22 @@ Given a center vector $$\mathbf{\hat{c}}$$ and a constant radius $$r$$ in $$(0, 
 
 Rearranging the distance function form that uses cosine gives $$\mathbf{\hat{c}} \cdot \mathbf{\hat{v}} = \cos r$$, which is the [Hesse normal form](https://en.wikipedia.org/wiki/Hesse_normal_form) of a plane. $$\mathbf{\hat{c}}$$ is a unit normal vector to the plane. These circles are just the intersection of a plane with the sphere: furthermore, circles on the surface of the sphere are also circles in 3D Euclidean space.
 
-Great circles are the lines of shortest distance between two points, or geodesics, on the sphere. For a great circle, $$r=\pi/2$$, and $$\mathbf{\hat{c}} \cdot \mathbf{\hat{v}} = 0$$. That is, a great circle is determined by its center point, also called the pole of the great circle, or the normal of the plane of the great circle. This text uses "center of the great circle", mostly because I think it's the more intuitive choice.
+Great circles are the lines of shortest distance between two points, or geodesics, on the sphere. For a great circle, $$r=\pi/2$$, and $$\mathbf{\hat{c}} \cdot \mathbf{\hat{v}} = 0$$. That is, a great circle is determined by its center point, also called the pole of the great circle, or the normal of the plane of the great circle. This text uses "pole".
 
-Given any two points on a great circle, the center of that great circle is
+Given any two points on a great circle, the pole of that great circle is
 
 $$\mathbf{\hat{c}} = \frac{\mathbf{\hat{a}} \times \mathbf{\hat{b}}}{\|\ldots\|}.$$
 
-Of course, $$-\mathbf{\hat{c}}$$ is also a center of that circle, but the two centers correspond to opposite orientations of the circle. Following the [right-hand rule](https://en.wikipedia.org/wiki/Right-hand_rule), the circle with center $$\mathbf{\hat{c}}$$ is oriented counterclockwise, turning from $$\mathbf{\hat{a}}$$ towards $$\mathbf{\hat{b}}$$. Later when spherical polygons show up, those will also be oriented counterclockwise.
+Of course, $$-\mathbf{\hat{c}}$$ is also a pole of that circle. The two poles can be understood to correspond to opposite orientations of the circle. Following the [right-hand rule](https://en.wikipedia.org/wiki/Right-hand_rule), the circle with pole $$\mathbf{\hat{c}}$$ is oriented counterclockwise, turning from $$\mathbf{\hat{a}}$$ towards $$\mathbf{\hat{b}}$$. Later when spherical polygons show up, those will also be oriented counterclockwise.
 
 To find if a point $$\mathbf{\hat{v}}$$ lies on the "counterclockwise side" of a great circle,
 take the dot product $$\mathbf{\hat{v}} \cdot \mathbf{\hat{c}}$$ or the triple product $$\begin{vmatrix} \mathbf{\hat{a}}, \mathbf{\hat{b}}, \mathbf{\hat{v}} \end{vmatrix}$$. If it's positive, then $$\mathbf{\hat{v}}$$ is within that oriented great circle.
 
 # Angles of Intersection
 <img src="/assets/images/spherical/intersection.svg" alt="Intersecting great circles on the sphere" height="300" style="float:right">
-The angle of intersection between two lines on the surface of the sphere is the central angle between the centers of their great circles. In the figure to the right, each colored point is the center of that colored great circle. Note that which angle depends on the orientation of the great circle: the other is given by negating one of the great circle centers, or equivalently as $$\pi - \theta$$. Central angle is the same as distance for the unit sphere, so one can use whichever form of the distance function is most convenient. Which angle depends on the order and orientation of the circles. This does reflect an important concept in spherical geometry: distances are angles, and angles are distances.
+The angle of intersection between two lines on the surface of the sphere is the central angle between their poles. In the figure to the right, each colored point is the pole of that colored great circle. Note that which angle is measured depends on the orientation and order of the poles: the other is given by negating one of the poles, or equivalently as $$\pi - \theta$$. Central angle is the same as distance for the unit sphere, so one can use whichever form of the distance function is most convenient. This does reflect an important concept in spherical geometry: distances are angles, and angles are distances.
 
-The particular case of the interior vertex angle $$\theta_a$$ at $$\mathbf{\hat{a}}$$ in a triangle with vertices $$\mathbf{\hat{a}}$$, $$\mathbf{\hat{b}}$$, and $$\mathbf{\hat{c}}$$ is as follows, although if you already have the great circle centers for the edges it may be more convenient to use those as above.
+The particular case of the interior vertex angle $$\theta_a$$ at $$\mathbf{\hat{a}}$$ in a triangle with vertices $$\mathbf{\hat{a}}$$, $$\mathbf{\hat{b}}$$, and $$\mathbf{\hat{c}}$$ is as follows, although if you already have the poles it may be more convenient to use those as above.
 
 $$\begin{split}
 \cos \theta_a &=
@@ -129,19 +129,19 @@ $$
 \cos \theta_a \|\mathbf{\hat{a}} \times \mathbf{\hat{b}}\|\|\mathbf{\hat{c}} \times \mathbf{\hat{a}}\| + \left(\mathbf{\hat{a}} \cdot \mathbf{\hat{b}}\right) \left(\mathbf{\hat{c}} \cdot \mathbf{\hat{a}}\right) = \mathbf{\hat{b}} \cdot \mathbf{\hat{c}}.
 $$
 
-A second triangle, called the polar triangle, can be formed by the centers of each edge's great circle: $$\mathbf{\hat{a}}' = \frac{\mathbf{\hat{b}} \times \mathbf{\hat{c}}}{\|\ldots\|}$$, $$\mathbf{\hat{b}}' = \frac{\mathbf{\hat{c}} \times \mathbf{\hat{a}}}{\|\ldots\|}$$, and $$\mathbf{\hat{c}}' = \frac{\mathbf{\hat{a}} \times \mathbf{\hat{b}}}{\|\ldots\|}$$. Applying the law of cosines to this new triangle gives the spherical law of cosines for angles, although it doesn't change much in vector form:
+A second triangle, called the polar triangle, can be formed by each edge's poles: $$\mathbf{\hat{a}}' = \frac{\mathbf{\hat{b}} \times \mathbf{\hat{c}}}{\|\ldots\|}$$, $$\mathbf{\hat{b}}' = \frac{\mathbf{\hat{c}} \times \mathbf{\hat{a}}}{\|\ldots\|}$$, and $$\mathbf{\hat{c}}' = \frac{\mathbf{\hat{a}} \times \mathbf{\hat{b}}}{\|\ldots\|}$$. Applying the law of cosines to this new triangle gives the spherical law of cosines for angles, although it doesn't change much in vector form:
 
 $$
 \left(\mathbf{\hat{a}} \cdot \mathbf{\hat{b}}\right) \sin \theta_a \sin \theta_b - \cos \theta_a \cos \theta_b = \cos \theta_c.
 $$
 
 # Point of intersection of great circles
-The points of intersection between two great circles are given by the cross product of their centers:
+The points of intersection between two great circles are given by the cross product of their poles:
 
 $$\mathbf{\hat{v}} = \frac{\mathbf{\hat{c}}_1 \times \mathbf{\hat{c}}_2}
 {\|\ldots\|}.$$
 
-There are two points of intersection, the other given by swapping the two great circle vectors or negating.
+There are two points of intersection, the other given by swapping the poles or negating one.
 
 A common problem: given the great circle formed by $$\mathbf{\hat{a}}$$ and $$\mathbf{\hat{b}}$$, and the great circle formed by $$\mathbf{\hat{c}}$$ and $$\mathbf{\hat{d}}$$, where do the two great circles intersect? This is $$\mathbf{\hat{v}} = \frac{\left(\mathbf{\hat{a}} \times \mathbf{\hat{b}}\right) \times \left(\mathbf{\hat{c}} \times \mathbf{\hat{d}}\right)}{\|\ldots\|}$$. Since scalar factors can be removed from the cross product, all the normalization factors are lumped together into the bottom. This may be simplified using the [vector quadruple product identity](https://en.wikipedia.org/wiki/Quadruple_product#Vector_quadruple_product) into
 
@@ -188,7 +188,7 @@ $$
 \end{bmatrix}.
 $$
 
-If $$\mathbf{v}$$ lies on the great circle with center $$\mathbf{\hat{c}}$$, the last term of the Rodrigues rotation is zero, and
+If $$\mathbf{v}$$ lies on the great circle with pole $$\mathbf{\hat{c}}$$, the last term of the Rodrigues rotation is zero, and
 
 $$
 \mathbf{v}_\mathrm{\theta} = \mathbf{v} \cos\theta + (\mathbf{\hat{c}} \times \mathbf{v}) \sin\theta.
@@ -198,10 +198,10 @@ This formula can be used to solve problems where we want a point a certain dista
 
 # The forward geodetic problem
 <img src="/assets/images/spherical/forward.svg" alt="The forward geodetic problem on the sphere" height="300" style="float:right">
-Here is a common geodesic calculation, called the direct or forward geodetic problem. Given a point $$\mathbf{\hat{a}}$$ on the globe, a bearing $$\theta$$, and a distance $$\ell$$, what is the destination point $$\mathbf{\hat{b}}$$? Bearing is the clockwise angle with respect to the north pole. Take these steps:
+Here is a common geodesic calculation, called the direct or forward geodetic problem. Given a point $$\mathbf{\hat{a}}$$ on the globe, a bearing $$\theta$$, and a distance $$\ell$$, what is the destination point $$\mathbf{\hat{b}}$$? Bearing is the clockwise angle with respect to the North Pole. Take these steps:
 
-1. Calculate the center $$\mathbf{\hat{c}}_1$$ of the great circle through the North Pole $$\mathbf{\hat{n}}$$ and $$\mathbf{\hat{a}}$$.
-2. Using the Rodrigues formula for points on a great circle, rotate that center $$\mathbf{\hat{c}}_1$$ by $$\theta$$ around $$\mathbf{\hat{a}}$$, giving a new great circle center $$\mathbf{\hat{c}}_2$$. (Keep orientation in mind: bearing is usually clockwise from north.)
+1. Calculate the pole $$\mathbf{\hat{c}}_1$$ of the great circle through the North Pole $$\mathbf{\hat{n}}$$ and $$\mathbf{\hat{a}}$$.
+2. Using the Rodrigues formula for points on a great circle, rotate that pole $$\mathbf{\hat{c}}_1$$ by $$\theta$$ around $$\mathbf{\hat{a}}$$, giving a new pole $$\mathbf{\hat{c}}_2$$. (Keep orientation in mind: bearing is usually clockwise from north.)
 3. Using the Rodrigues formula for points on a great circle again, rotate $$\mathbf{\hat{a}}$$ by $$\ell$$ around $$\mathbf{\hat{c}}_2$$, giving $$\mathbf{\hat{b}}$$. Remember, spherical distances are angles and vice versa.
 
 # Interpolation
@@ -234,7 +234,7 @@ $$
 
 # Perpendicular through a point
 <img src="/assets/images/spherical/perpendicular.svg" alt="Constructing a perpendicular through a point" height="300" style="float:right">
-Let $$\mathbf{\hat{c}}$$ be the center of some circle on the sphere (not necessarily great): the red point in the figure to the right. Any other great circle that passes through $$\mathbf{\hat{c}}$$ is perpendicular to the original circle. If $$\mathbf{\hat{a}}$$ (the green point) is an arbitrary point, then the great circle that passes through $$\mathbf{\hat{a}}$$ and $$\mathbf{\hat{c}}$$, and is thus perpendicular to the other great circle centered at $$\mathbf{\hat{c}}$$, is
+Let $$\mathbf{\hat{c}}$$ be the center of some circle on the sphere (not necessarily great): the red point in the figure to the right. Any other great circle that passes through $$\mathbf{\hat{c}}$$ is perpendicular to the original circle. If $$\mathbf{\hat{a}}$$ (the green point) is an arbitrary point, then the great circle that passes through $$\mathbf{\hat{a}}$$ and $$\mathbf{\hat{c}}$$, and is thus perpendicular to the other circle centered at $$\mathbf{\hat{c}}$$, is
 
 $$
 \mathbf{\hat{g}} = \frac{\mathbf{\hat{a}} \times \mathbf{\hat{c}}}{\|\ldots\|}.
