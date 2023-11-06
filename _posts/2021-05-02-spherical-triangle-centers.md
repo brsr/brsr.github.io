@@ -21,7 +21,7 @@ The linked paper above calls this the vertex-median point, because not all the q
 <center><img src="/assets/images/spherical/vertex-median.svg" alt="The vertex-median point of a spherical triangle" height="300" /></center>
 
 # Centroid (Area)
-The point that divides the triangle into three equal-area triangles, as pictured, is more complicated to construct. Use the formula in [this Stack Exchange answer](https://math.stackexchange.com/questions/1151428/point-within-a-spherical-triangle-given-areas) with $$t_1=t_2=t_3=1/3$$.
+The point that divides the triangle into three equal-area triangles, as pictured, is more complicated to construct. [See this separate post for details.]({% post_url 2023-11-04-spherical-areal %})
 
 <center><img src="/assets/images/spherical/area_centroid.svg" alt="The area centroid of a spherical triangle" height="300" /></center>
 
