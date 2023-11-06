@@ -24,7 +24,7 @@ imagewidth: 32%
 
 Russell[^Russell] notes that in spherical geometry, the point where the medians of the triangle intersect is in general not the same as the point that divides a triangle into three smaller triangles of equal area as shown. He gives a formula for the vertex median point: $$ (\csc A : \csc B : \csc C) $$, but not the equal-area center. Later, we use spherical area coordinates to derive that center and some related points.
 
-We'll switch between notation using angles labeled $$A$$, $$B$$, and $$C$$ and vertices labeled with subscripts $$i$$, depending on which is more convenient. The length of the edge opposite is $$a$$, $$b$$, or $$c$$; or $\ell_i$$, correspondingly.
+We'll switch between notation using angles labeled $$A$$, $$B$$, and $$C$$ and vertices labeled with subscripts $$i$$, depending on which is more convenient. The length of the edge opposite is $$a$$, $$b$$, or $$c$$; or $$\ell_i$$, correspondingly.
 
 # Spherical area coordinates
 
