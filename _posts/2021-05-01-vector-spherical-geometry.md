@@ -45,16 +45,17 @@ where [the 2-variable form of $$\arctan$$, commonly called `arctan2` or `atan2` 
 A random vector on the unit sphere can be produced by creating a 3D vector, each of whose components is drawn from a normal distribution with mean 0 and constant standard deviation, and then normalizing. The distribution of vectors drawn this way is uniform across the sphere.
 
 # Distance
-Distance on the unit sphere is simply the central angle between the two unit vectors. The distance function on the sphere has a few equivalent forms:
+Distance on the unit sphere is simply the central angle between the two unit vectors. The distance function on the sphere [has a few equivalent forms of varying numerical accuracy](https://people.eecs.berkeley.edu/~wkahan/Mindless.pdf):
 
 $$
 d\left(\mathbf{\hat{a}}, \mathbf{\hat{b}}\right)
 = \arccos\left(\mathbf{\hat{a}} \cdot \mathbf{\hat{b}}\right)
 = \arcsin\left(\| \mathbf{\hat{a}} \times \mathbf{\hat{b}} \|\right)
-= \arctan\left(\frac{\| \mathbf{a} \times \mathbf{b} \|}{\mathbf{a} \cdot \mathbf{b}}\right).
+= \arctan\left(\frac{\| \mathbf{a} \times \mathbf{b} \|}{\mathbf{a} \cdot \mathbf{b}}\right)
+= 2\arctan\left(\frac{\| \mathbf{\hat{a}} - \mathbf{\hat{b}} \|}{\mathbf{\hat{a}} + \mathbf{\hat{b}}}\right).
 $$
 
-The central angle takes values from 0 to $$\pi$$ in radians. Radians are convenient here because they make angles and distances equivalent. Note that the $$\arcsin$$ form is only valid for distances less than $$\pi/2$$. The form using $$\arctan$$ is a valid formula for the central angle between any two non-zero vectors, not just unit vectors: it is also numerically accurate over the entire range.
+The central angle takes values from 0 to $$\pi$$ in radians. Radians are convenient here because they make angles and distances equivalent. Note that the $$\arcsin$$ form is only valid for distances less than $$\pi/2$$. The form using $$\arctan$$ is a valid formula for the central angle between any two non-zero vectors, not just unit vectors.
 
 The distance function is bounded from below by the Euclidean distance between the unit vectors:
 
