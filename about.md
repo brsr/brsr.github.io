@@ -11,3 +11,5 @@ I live near [Utica](https://en.wikipedia.org/wiki/Utica,_New_York), between Syra
 I mostly use this site as storage for various small mathematical, geometric, and/or programming projects. Some entries are back-dated, reflecting when I actually did the project rather than when I got around to writing a blog entry about it.
 
 This site is built in [Jekyll](https://jekyllrb.com/), using a modified version of the [Midnight](https://github.com/pages-themes/midnight) theme.
+
+Thanks are due to [Brian Hood, Jonathan Turley, Jonathan Zittrain, David Faber, and Guido Scorza](https://arstechnica.com/information-technology/2024/12/certain-names-make-chatgpt-grind-to-a-halt-and-we-know-why/).
