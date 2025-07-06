@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Approximating the Binomial Distribution with the Beta"
-tags: python jupyter
+tags: python jupyter stats
 ---
 I did a quick analysis on using the beta distribution to approximate the binomial distribution. This was definitely done for serious statistical reasons and not because I had an idea while rolling dice during a tabletop roleplaying game.
 
