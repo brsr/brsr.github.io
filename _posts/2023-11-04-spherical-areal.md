@@ -240,7 +240,7 @@ As before, we can ignore the factor $$4 \cos \frac{\Omega}{2}$$. The second coor
 
 Note that these are not the points that can be used to divide a spherical triangle into six smaller triangles, but that can be accomplished by dividing a spherical triangle into three triangles using the equal-area center, and then dividing those triangles in two using the midpoint opposite the equal-area center.
 
-*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/equalareapoint.py).*
+*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapstuff/blob/master/bin/equalareapoint.py).*
 
 [^Praun]: Praun, Emil; Hoppe, Hugues (2003), "Spherical parametrization and remeshing", ACM Transactions on Graphics, 22 (3): 340–349, doi:10.1145/882262.882274, <http://hhoppe.com/sphereparam.pdf>
 [^Carfora]: Carfora, Maria Francesca (2007), "Interpolation on spherical geodesic grids: A comparative study", Journal of Computational and Applied Mathematics, 210 (1–2): 99–105, doi:10.1016/j.cam.2006.10.068, <https://www.sciencedirect.com/science/article/pii/S0377042706006522>

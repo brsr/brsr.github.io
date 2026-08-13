@@ -90,4 +90,4 @@ Unlike in plane geometry, the area of the triangle formed by the intouch points 
 
 It's worth mentioning that the study of spherical triangle centers is much less well developed than that of planar triangle centers. There may be other ways to translate these definitions between geometries. And like I said earlier, some planar triangle centers correspond to multiple spherical centers. These definitions correspond to the paper I linked earlier: other papers may use other definitions.
 
-*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/vector-spherical-geometry.py).*
+*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapstuff/blob/master/bin/vector-spherical-geometry.py).*

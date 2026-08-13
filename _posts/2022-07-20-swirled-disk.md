@@ -85,4 +85,4 @@ None of these are improvements on the Lambert projection, at least in terms of a
 
 If you want some area-preserving transformations to make a better map instead of a worse one, I recommend this paper: [Daniel “daan” Strebe (2018): A bevy of area-preserving transforms for map projection designers, Cartography and Geographic Information Science, DOI: 10.1080/15230406.2018.1452632](https://doi.org/10.1080/15230406.2018.1452632).
 
-*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/swirls.py).*
+*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapstuff/blob/master/bin/swirls.py).*

@@ -308,4 +308,4 @@ $$
 
 This is approximately $$\pi r^2$$ for small $$r$$. The perimeter is $$2\pi \sin r$$, which is approximately $$2\pi r$$ for small $$r$$.
 
-*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/vector-spherical-geometry.py).*
+*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapstuff/blob/master/bin/vector-spherical-geometry.py).*

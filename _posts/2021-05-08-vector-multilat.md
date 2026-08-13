@@ -140,4 +140,4 @@ Given this system, proceed as in the three-plane case. Although the least square
 # Triangulation
 Does your application have angles of bearing instead of distances, or a mix of bearings and distances? Convert the bearings to great circles using the method described in [the solving the "forward problem" section of this earlier post]({% post_url 2021-05-01-vector-spherical-geometry %}), and then apply the methods decribed above.
 
-*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapproj/blob/master/bin/vector-multilat.py).*
+*A Python script to create the figures in this post is located [here](https://github.com/brsr/mapstuff/blob/master/bin/vector-multilat.py).*
